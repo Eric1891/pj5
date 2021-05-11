@@ -22,7 +22,6 @@ function draw() {
   specularMaterial(120); //change the specularMaterial color
   box(150, 150, 150); //change box size
   pop();
-
   
   push();//add new sphare translate
   translate(-width / 10, 8, 4);
