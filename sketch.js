@@ -5,7 +5,7 @@ function setup() {
 }
 
 function draw() { 
-  background(220,120,230); 
+  background(mouseX,120,230); 
   
  
   let locX = mouseX - height /2;
@@ -17,29 +17,33 @@ function draw() {
 
   push();
   translate(-width / 5, 3, 5);//change the translate
-  rotateZ(frameCount * mouseX);//change the rotateZ
-  rotateX(frameCount * mouseX);//change  the rotateX 
+  rotateZ(frameCount * 0.001);//change the rotateZ
+  rotateX(frameCount * 0.001);//change  the rotateX 
   specularMaterial(120); //change the specularMaterial color
   box(150, 150, 150); //change box size
   pop();
+
   
   push();//add new sphare translate
   translate(-width / 10, 8, 4);
   rotateZ(frameCount * mouseY);
-  rotateX(frameCount * mouseX);
+  rotateX(frameCount * 0.001);
   ambientMaterial(185);
   sphere(60, 120);
   
   push();// add new circle translate
-  translate(width / 6, height / 6, 1);
+  translate(width / 4, height / 4, 1);
   rotateZ(frameCount * 0.001);
   rotateX(frameCount * 0.001);
   rotateY(frameCount * 0.001);
   specularMaterial(250);
-  torus(100, 40, 64, 64);
+  torus(100, 30, 64, 64);
   pop();
   rect(100,200,200,100);
 }
+
+
+   
 
 
    
